@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Portfolio - ปฏิพัทธ์ สายรัดเงิน</title>
+  <title>My Resume - ปฏิพัทธ์ สายรัดเงิน</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -17,240 +18,432 @@
     }
 
     body{
-      font-family: 'Luckiest Guy', cursive;
-      background: #F5E9D7;
-      color: #3E5F44;
+      font-family:'Luckiest Guy', cursive;
+      background:#F5E9D7;
+      color:#3E5F44;
       overflow-x:hidden;
     }
 
-    /* Navbar */
-/* Navbar */
-nav{
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 45px;
-  position:fixed;
-  top:0;
-  background: rgba(245,233,215,0.95);
-  backdrop-filter: blur(10px);
-  z-index:1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+    /* ===== NAVBAR ===== */
 
-nav ul{
-  display:flex;
-  gap:22px;
-  list-style:none;
-}
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      background:rgba(245,233,215,0.95);
+      backdrop-filter:blur(10px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 50px;
+      z-index:1000;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+    }
 
-/* Hero Section */
-.hero{
-  min-height:85vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:90px 8%;
-  position:relative;
-}
+    nav h1{
+      font-size:1.5rem;
+      color:#2F4F34;
+    }
 
-.hero-content{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  width:100%;
-  gap:25px;
-  flex-wrap:wrap;
-}
+    nav ul{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
 
-.hero-text h2{
-  font-size:3.5rem;
-  line-height:1.1;
-  color:#2F4F34;
-  margin-bottom:12px;
-}
-
-.hero-text p{
-  font-size:1.05rem;
-  margin-bottom:8px;
-  color:#5E7A61;
-}
-
-/* Sections */
-section{
-  padding:70px 8%;
-}
-
-.section-title{
-  font-size:2.1rem;
-  margin-bottom:18px;
-  color:#2F4F34;
-}
-
-.card{
-  background:#EFE6D8;
-  padding:25px;
-  border-radius:22px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  margin-bottom:15px;
-}
-
-.card p,
-.card li{
-  font-size:1rem;
-  line-height:1.7;
-  color:#4E6652;
-}
-
-/* Skills */
-ul.skills{
-  list-style:none;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-ul.skills li{
-  background:#DAD7CD;
-  padding:10px 18px;
-  border-radius:50px;
-}
-
-    /* Footer */
-    footer{
-      text-align:center;
-      padding:40px;
-      background:#DAD7CD;
+    nav a{
+      text-decoration:none;
       color:#3E5F44;
+      transition:0.3s;
+      font-size:0.95rem;
+    }
+
+    nav a:hover{
+      color:#6B8E6E;
+    }
+
+    /* ===== MAIN CONTAINER ===== */
+
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      font-size:2rem;
+      margin-bottom:25px;
+      color:#2F4F34;
+    }
+
+    /* ===== HERO ===== */
+
+    .hero{
+      min-height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      text-align:center;
+    }
+
+    .hero-box{
+      background:#EFE6D8;
+      padding:45px 35px;
+      border-radius:35px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      width:100%;
+      max-width:650px;
+      position:relative;
+    }
+
+    .profile-img{
+      width:150px;
+      height:150px;
+      object-fit:cover;
+      border-radius:50%;
+      border:6px solid #DAD7CD;
+      margin-bottom:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .hero h2{
+      font-size:3rem;
+      line-height:1.2;
+      margin-bottom:10px;
+      color:#2F4F34;
+    }
+
+    .tagline{
+      color:#6B8E6E;
+      font-size:1rem;
+      margin-bottom:8px;
+    }
+
+    .school{
+      font-size:0.95rem;
+      color:#7A8B6F;
+    }
+
+    /* ===== CARD ===== */
+
+    .card{
+      background:#EFE6D8;
+      padding:28px;
+      border-radius:25px;
+      box-shadow:0 8px 18px rgba(0,0,0,0.06);
+      margin-bottom:20px;
+    }
+
+    .card p{
+      line-height:1.8;
+      color:#4E6652;
       font-size:1rem;
     }
 
-    /* Responsive */
+    /* ===== ABOUT ===== */
+
+    .about-wrapper{
+      display:flex;
+      align-items:center;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+
+    .about-text{
+      flex:1;
+      min-width:280px;
+    }
+
+    .ship-img{
+      width:260px;
+    }
+
+    /* ===== DROPDOWN ===== */
+
+    details{
+      background:#EFE6D8;
+      padding:18px 22px;
+      border-radius:18px;
+      margin-bottom:18px;
+      box-shadow:0 5px 12px rgba(0,0,0,0.05);
+      cursor:pointer;
+    }
+
+    summary{
+      font-size:1.05rem;
+      color:#2F4F34;
+      outline:none;
+    }
+
+    details p{
+      margin-top:15px;
+      color:#4E6652;
+      line-height:1.7;
+    }
+
+    /* ===== CONTACT ===== */
+
+    .contact-box{
+      background:#DAD7CD;
+      padding:30px;
+      border-radius:25px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .contact-box p{
+      margin:12px 0;
+      font-size:1rem;
+      color:#3E5F44;
+    }
+
+    /* ===== DINO DECOR ===== */
+
+    .dino{
+      position:absolute;
+      width:90px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .dino1{
+      top:-25px;
+      left:-20px;
+    }
+
+    .dino2{
+      bottom:-25px;
+      right:-20px;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-12px);
+      }
+      100%{
+        transform:translateY(0);
+      }
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#4E6652;
+      font-size:0.9rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
     @media(max-width:768px){
 
       nav{
-        padding:20px;
+        padding:15px 20px;
       }
 
       nav ul{
         gap:15px;
       }
 
-      .hero-text h2{
-        font-size:2.5rem;
+      .hero h2{
+        font-size:2.2rem;
       }
 
-      .hero-content{
-        flex-direction:column-reverse;
+      .hero-box{
+        padding:35px 25px;
+      }
+
+      .profile-img{
+        width:120px;
+        height:120px;
+      }
+
+      .about-wrapper{
+        flex-direction:column;
         text-align:center;
       }
 
-      .hero-image img.profile{
-        width:280px;
+      .ship-img{
+        width:200px;
       }
 
       .dino{
-        width:80px;
+        width:70px;
       }
+
     }
 
   </style>
+
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- ===== NAVBAR ===== -->
+
   <nav>
+
     <h1>My Resume</h1>
 
     <ul>
       <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skill</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
+  <div class="container">
 
-    <div class="hero-content">
+    <!-- ===== HERO ===== -->
 
-      <div class="hero-text">
+    <section class="hero">
+
+      <div class="hero-box">
+
+        <img src="Dino-Cute.png" class="dino dino1">
+        <img src="Dino-Cute.png" class="dino dino2">
+
+        <img src="profiledino.png" alt="Profile" class="profile-img">
+
         <h2>ปฏิพัทธ์ <br>สายรัดเงิน</h2>
 
-        <p>Logistics And Transportation</p>
+        <p class="tagline">
+          Logistics And Transportation
+        </p>
 
         <p class="school">
           Panyapiwat Institute Management
         </p>
-      </div>
-
-      <div class="hero-image">
-
-        <img src="profiledino.png" alt="Profile" class="profile">
-
-        <img src="Dino-Cute.png" class="dino top" alt="Cute Dino">
-        <img src="Dino-Cute.png" class="dino bottom" alt="Cute Dino">
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- ===== ABOUT ===== -->
 
-  <!-- About -->
-  <section id="about">
+    <section id="about">
 
-    <h2 class="section-title">About Me</h2>
+      <h2 class="section-title">About Me</h2>
 
-    <div class="card">
-      <p>
-        สวัสดีครับ ผมเป็นนักศึกษาคณะการจัดการโลจิสติกส์ 
-        ที่มีความสนใจด้านการขนส่ง การจัดการคลังสินค้า 
-        และการวางแผนระบบโลจิสติกส์อย่างมีประสิทธิภาพ
-      </p>
+      <div class="card">
 
-      <p>
-        ผมชอบการออกแบบงานนำเสนอ การตัดต่อวิดีโอ 
-        และการใช้เครื่องมือดิจิทัลเพื่อพัฒนางานให้ดูทันสมัยและสร้างสรรค์
-      </p>
-    </div>
+        <div class="about-wrapper">
 
-  </section>
+          <div class="about-text">
 
-  <!-- Skills -->
-  <section id="skills">
+            <p>
+              สวัสดีครับ ผมเป็นนักศึกษาคณะการจัดการโลจิสติกส์ 
+              ที่มีความสนใจด้านการขนส่ง การวางแผนระบบโลจิสติกส์ 
+              และการจัดการซัพพลายเชนให้มีประสิทธิภาพมากขึ้น
+            </p>
 
-    <h2 class="section-title">Skills</h2>
+            <br>
 
-    <div class="card">
+            <p>
+              ผมชื่นชอบการออกแบบงาน Presentation 
+              การตัดต่อวิดีโอ และการใช้เครื่องมือดิจิทัลต่าง ๆ 
+              เพื่อพัฒนาทักษะด้านความคิดสร้างสรรค์และการทำงานร่วมกัน
+            </p>
 
-      <ul class="skills">
-        <li>CapCut</li>
-        <li>Microsoft Excel</li>
-        <li>Canva</li>
-      </ul>
+          </div>
 
-    </div>
+          <img src="Ship.png" alt="Ship" class="ship-img">
 
-  </section>
+        </div>
 
-  <!-- Contact -->
-  <section id="contact">
+      </div>
 
-    <h2 class="section-title">Contact</h2>
+    </section>
 
-    <div class="card">
+    <!-- ===== EDUCATION ===== -->
 
-      <p>Email : 6650101702@stu.pim.ac.th</p>
-      <p>Phone : 081-xxx-xxxx</p>
-      <p>Address : อยู่ในใจเธอ ❤️</p>
+    <section id="education">
 
-    </div>
+      <h2 class="section-title">Education</h2>
 
-  </section>
+      <details open>
+        <summary>สถาบันการจัดการปัญญาภิวัฒน์</summary>
+        <p>
+          คณะการจัดการโลจิสติกส์  
+          สาขา Logistics And Transportation
+        </p>
+      </details>
 
-  <!-- Footer -->
+      <details>
+        <summary>
+          โรงเรียนกาญจนาภิเษกวิทยาลัยนครปฐม 
+          (พระตำหนักสวนกุหลาบมัธยม)
+        </summary>
+
+        <p>
+          ระดับชั้นมัธยมศึกษาตอนปลาย
+        </p>
+      </details>
+
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+
+    <section id="skills">
+
+      <h2 class="section-title">Skills</h2>
+
+      <details>
+        <summary>CapCut</summary>
+        <p>
+          สามารถตัดต่อวิดีโอ ทำโมชั่น 
+          และออกแบบคอนเทนต์สำหรับงานนำเสนอได้
+        </p>
+      </details>
+
+      <details>
+        <summary>Microsoft Excel</summary>
+        <p>
+          ใช้งานสูตรพื้นฐาน ตารางข้อมูล 
+          และการจัดการข้อมูลด้านโลจิสติกส์ได้
+        </p>
+      </details>
+
+      <details>
+        <summary>Canva</summary>
+        <p>
+          สามารถออกแบบ Presentation 
+          Poster และงาน Graphic เบื้องต้นได้
+        </p>
+      </details>
+
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+
+    <section id="contact">
+
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-box">
+
+        <p>Email : 6650101702@stu.pim.ac.th</p>
+        <p>Tel : 081-xxx-xxxx</p>
+        <p>Address : อยู่ในใจเธอ ❤️</p>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+
   <footer>
     © 2026 Pattipat Portfolio | Moss Green & Beige Theme
   </footer>
