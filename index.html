@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>My Resume | ปฏิพัทธ์ สายรัดเงิน</title>
 
@@ -32,8 +32,6 @@ nav{
     top:0;
     left:0;
     z-index:999;
-    background:rgba(245,233,215,0.95);
-    backdrop-filter:blur(10px);
 
     display:flex;
     justify-content:space-between;
@@ -41,27 +39,29 @@ nav{
 
     padding:18px 50px;
 
+    background:rgba(245,233,215,0.95);
+    backdrop-filter:blur(10px);
+
     box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .logo{
-    font-size:1.4rem;
+    font-size:1.3rem;
     color:#2E4A32;
 }
 
 nav ul{
-    list-style:none;
     display:flex;
-    gap:24px;
+    list-style:none;
+    gap:22px;
 }
 
 nav a{
     text-decoration:none;
     color:#355E3B;
-    font-size:0.95rem;
-    transition:0.3s;
     padding:8px 14px;
     border-radius:30px;
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -76,6 +76,7 @@ nav a:hover{
     display:flex;
     justify-content:center;
     align-items:center;
+
     padding:110px 8% 60px;
 }
 
@@ -86,11 +87,11 @@ nav a:hover{
     background:#EFE3D0;
     border-radius:40px;
 
-    padding:50px;
+    padding:45px;
 
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     gap:40px;
 
     box-shadow:0 10px 30px rgba(0,0,0,0.08);
@@ -98,14 +99,9 @@ nav a:hover{
     position:relative;
 }
 
-.hero-text{
-    flex:1;
-}
-
 .hero-text h1{
     font-size:3rem;
     line-height:1.2;
-    color:#2E4A32;
     margin-bottom:15px;
 }
 
@@ -115,28 +111,26 @@ nav a:hover{
     color:#56725C;
 }
 
-.hero-text .tagline{
-    margin-top:8px;
-    font-size:1.05rem;
+.tagline{
+    margin-top:5px;
 }
 
-.hero-text .school{
+.school{
     font-size:0.95rem;
 }
 
 .hero-image{
-    flex:1;
-    display:flex;
-    justify-content:center;
     position:relative;
 }
 
 .profile{
-    width:280px;
-    height:280px;
+    width:270px;
+    height:270px;
     object-fit:cover;
+
     border-radius:50%;
     border:10px solid #D8CBB5;
+
     box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
@@ -150,17 +144,17 @@ nav a:hover{
 
 .dino.top{
     top:-20px;
-    right:20px;
+    right:-10px;
 }
 
 .dino.bottom{
     bottom:-20px;
-    left:10px;
+    left:-10px;
 }
 
 @keyframes float{
     0%{transform:translateY(0);}
-    50%{transform:translateY(-12px);}
+    50%{transform:translateY(-10px);}
     100%{transform:translateY(0);}
 }
 
@@ -177,19 +171,18 @@ nav a:hover{
 
 .box{
     background:#EFE3D0;
-    border-radius:30px;
     padding:35px;
+    border-radius:30px;
+
     box-shadow:0 8px 20px rgba(0,0,0,0.07);
 }
 
 .section-title{
     font-size:2rem;
     margin-bottom:20px;
-    color:#2E4A32;
 }
 
 .box p{
-    font-size:1rem;
     line-height:2;
     color:#4E6B53;
 }
@@ -204,16 +197,16 @@ nav a:hover{
 }
 
 .ship-img{
-    width:280px;
+    width:260px;
 }
 
-/* ================= DROPDOWN ================= */
+/* ================= DETAILS ================= */
 
 details{
     margin-bottom:18px;
     background:#D8CBB5;
-    padding:15px 18px;
-    border-radius:18px;
+    border-radius:20px;
+    padding:16px 18px;
     transition:0.3s;
 }
 
@@ -229,29 +222,8 @@ summary{
 
 details p{
     margin-top:12px;
-    font-size:0.95rem;
     line-height:1.8;
-}
-
-/* ================= SKILLS ================= */
-
-.skill-tags{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:15px;
-}
-
-.skill-tags span{
-    background:#D8CBB5;
-    padding:10px 18px;
-    border-radius:40px;
-    transition:0.3s;
-}
-
-.skill-tags span:hover{
-    transform:translateY(-4px);
-    background:#C5B49B;
+    font-size:0.95rem;
 }
 
 /* ================= CONTACT ================= */
@@ -290,7 +262,6 @@ footer{
     .hero-container{
         flex-direction:column-reverse;
         text-align:center;
-        padding:40px 25px;
     }
 
     .hero-text h1{
@@ -326,7 +297,7 @@ footer{
     <ul>
         <li><a href="#about">🌿 About</a></li>
         <li><a href="#education">🎓 Education</a></li>
-        <li><a href="#skills">💡 Skills</a></li>
+        <li><a href="#skills">💡 Skill</a></li>
         <li><a href="#contact">📞 Contact</a></li>
     </ul>
 
@@ -377,20 +348,20 @@ footer{
 
             <div class="about-flex">
 
-                <div class="about-text">
+                <div>
 
                     <p>
                         สวัสดีครับ ผมเป็นนักศึกษาคณะการจัดการโลจิสติกส์ 
-                        ที่มีความสนใจด้านการขนส่ง การจัดการคลังสินค้า 
-                        และการวางแผนระบบโลจิสติกส์ให้มีประสิทธิภาพมากยิ่งขึ้น
+                        ที่สนใจด้านการขนส่ง การวางแผนเส้นทาง 
+                        และการจัดการระบบโลจิสติกส์ให้มีประสิทธิภาพ
                     </p>
 
                     <br>
 
                     <p>
-                        ผมชื่นชอบการออกแบบงานนำเสนอ การตัดต่อวิดีโอ 
-                        และการใช้เครื่องมือดิจิทัลเพื่อสร้างผลงานที่ดูทันสมัย 
-                        น่ารัก และน่าสนใจอยู่เสมอ 🚢✨
+                        ผมชอบการออกแบบงาน การตัดต่อวิดีโอ 
+                        และการใช้เครื่องมือดิจิทัลเพื่อสร้างผลงานที่ดูน่าสนใจ 
+                        และมีความสร้างสรรค์ 🚢✨
                     </p>
 
                 </div>
@@ -416,17 +387,25 @@ footer{
             <h2 class="section-title">🎓 Education</h2>
 
             <details>
-                <summary>🏫 สถาบันการจัดการปัญญาภิวัฒน์</summary>
+
+                <summary>🎓 ป.ตรี</summary>
+
                 <p>
+                    สถาบันการจัดการปัญญาภิวัฒน์ <br>
                     คณะการจัดการโลจิสติกส์และการขนส่ง
                 </p>
+
             </details>
 
             <details>
-                <summary>📘 โรงเรียนกาญจนาภิเษกวิทยาลัยนครปฐม</summary>
+
+                <summary>🏫 ม.ปลาย</summary>
+
                 <p>
+                    โรงเรียนกาญจนาภิเษกวิทยาลัยนครปฐม <br>
                     (พระตำหนักสวนกุหลาบมัธยม)
                 </p>
+
             </details>
 
         </div>
@@ -443,16 +422,38 @@ footer{
 
         <div class="box">
 
-            <h2 class="section-title">💡 Skills</h2>
+            <h2 class="section-title">💡 Skill</h2>
 
             <details>
-                <summary>✨ Click to view my skills</summary>
 
-                <div class="skill-tags">
-                    <span>🎬 CapCut</span>
-                    <span>📊 Microsoft Excel</span>
-                    <span>🎨 Canva</span>
-                </div>
+                <summary>🎬 CapCut</summary>
+
+                <p>
+                    สามารถตัดต่อวิดีโอ ทำโมชั่น 
+                    ใส่เอฟเฟกต์ และจัดองค์ประกอบวิดีโอให้น่าสนใจได้
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>📊 Microsoft Excel</summary>
+
+                <p>
+                    สามารถจัดการข้อมูล ใช้สูตรพื้นฐาน 
+                    สร้างตาราง และวิเคราะห์ข้อมูลเบื้องต้นได้
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>🎨 Canva</summary>
+
+                <p>
+                    สามารถออกแบบงานนำเสนอ อินโฟกราฟิก 
+                    และสื่อกราฟิกต่าง ๆ ให้ดูทันสมัยและน่าสนใจ
+                </p>
 
             </details>
 
